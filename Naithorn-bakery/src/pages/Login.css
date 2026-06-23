@@ -1,0 +1,170 @@
+.login-page {
+  min-height: 100vh;
+  padding: calc(36px + env(safe-area-inset-top, 0px)) 22px calc(96px + env(safe-area-inset-bottom, 0px));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 36px;
+  max-width: 320px;
+}
+
+.login-header .logo {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 5vw, 2.125rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  background: linear-gradient(120deg, var(--accent) 0%, #e8942e 50%, #b85d06 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 10px;
+  line-height: 1.15;
+}
+
+.login-header .subtitle {
+  font-size: 15px;
+  color: var(--text-muted);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.role-selector {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  width: 100%;
+  max-width: 420px;
+}
+
+@media (max-width: 360px) {
+  .role-selector {
+    grid-template-columns: 1fr;
+  }
+}
+
+.role-card {
+  background: linear-gradient(165deg, var(--surface) 0%, var(--surface-muted) 100%);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 22px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  min-height: 132px;
+}
+
+.role-card:hover {
+  border-color: var(--border-strong);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.role-card.selected {
+  border-color: var(--accent);
+  background: linear-gradient(165deg, var(--accent-light) 0%, #fffdfb 100%);
+  box-shadow: var(--shadow), 0 0 0 3px var(--accent-ring);
+}
+
+.role-icon {
+  font-size: 2.25rem;
+  line-height: 1;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.06));
+}
+
+.role-name {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0;
+}
+
+.role-description {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.45;
+  max-width: 140px;
+}
+
+.login-form {
+  width: 100%;
+  max-width: 420px;
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.pin-input-container {
+  width: 100%;
+}
+
+.pin-input {
+  width: 100%;
+  padding: 18px 16px;
+  font-size: 26px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.35em;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  color: var(--text);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.pin-input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-ring);
+}
+
+.pin-input::placeholder {
+  letter-spacing: normal;
+  font-size: 15px;
+  font-family: var(--font-body);
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+.sign-in-btn {
+  width: 100%;
+  padding: 17px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: var(--font-body);
+  color: white;
+  background: linear-gradient(180deg, #e08012 0%, var(--accent) 45%, var(--accent-hover) 100%);
+  border: none;
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+  box-shadow: var(--shadow-sm), 0 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.sign-in-btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.sign-in-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.sign-in-btn:disabled {
+  opacity: 0.48;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}

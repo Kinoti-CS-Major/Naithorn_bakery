@@ -1,0 +1,317 @@
+.delivery-view {
+  padding: 22px 20px 24px;
+  min-height: 100vh;
+}
+
+.delivery-header {
+  margin-bottom: 22px;
+}
+
+.delivery-view .page-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 4.5vw, 1.85rem);
+  font-weight: 800;
+  color: var(--text);
+  letter-spacing: -0.02em;
+}
+
+.delivery-view .form-card {
+  margin-bottom: 28px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 8px;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.number-input {
+  width: 100%;
+  padding: 16px;
+  font-size: 20px;
+  font-family: 'Syne', sans-serif;
+  font-weight: 600;
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  background-color: var(--surface);
+  color: var(--text);
+  outline: none;
+  transition: border-color 0.2s ease;
+  appearance: none;
+  -moz-appearance: textfield;
+}
+
+.number-input::-webkit-outer-spin-button,
+.number-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.number-input:focus {
+  border-color: var(--accent);
+}
+
+.product-breakdown {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.breakdown-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.product-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.product-row:last-child {
+  border-bottom: none;
+}
+
+.product-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+}
+
+.small-number-input {
+  width: 80px;
+  padding: 8px 12px;
+  font-size: 16px;
+  font-family: 'Syne', sans-serif;
+  font-weight: 600;
+  text-align: center;
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  background-color: var(--surface);
+  color: var(--text);
+  outline: none;
+  transition: border-color 0.2s ease;
+  appearance: none;
+  -moz-appearance: textfield;
+}
+
+.small-number-input::-webkit-outer-spin-button,
+.small-number-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.small-number-input:focus {
+  border-color: var(--accent);
+}
+
+.depart-btn {
+  width: 100%;
+  padding: 18px 20px;
+  font-size: 17px;
+  font-weight: 600;
+  font-family: var(--font-body);
+  color: white;
+  background: linear-gradient(180deg, #e08012 0%, var(--accent) 45%, var(--accent-hover) 100%);
+  border: none;
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.2s ease;
+  box-shadow: var(--shadow-sm), 0 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.depart-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.completed-trips {
+  margin-top: 32px;
+}
+
+.list-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.empty-state {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 14px;
+  padding: 40px 20px;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.trips-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.trip-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 16px 18px;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.2s ease;
+}
+
+.trip-item:hover {
+  box-shadow: var(--shadow);
+}
+
+.trip-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.trip-crates {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+}
+
+.trip-time {
+  font-size: 14px;
+  color: var(--text-muted);
+  font-weight: 500;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.trip-details {
+  display: flex;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--text-muted);
+  font-weight: 500;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.trip-progress {
+  background: radial-gradient(ellipse at 50% 0%, rgba(199, 106, 8, 0.12) 0%, transparent 55%),
+    linear-gradient(180deg, var(--surface) 0%, var(--surface-muted) 100%);
+  border: 1px solid rgba(199, 106, 8, 0.35);
+  border-radius: var(--radius-lg);
+  padding: 36px 20px 32px;
+  text-align: center;
+  margin-bottom: 22px;
+  box-shadow: var(--shadow-md);
+}
+
+.timer-display {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 9vw, 2.75rem);
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  color: var(--accent);
+  margin-bottom: 14px;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 8px 18px;
+  border-radius: var(--radius-pill);
+  font-size: 13px;
+  font-weight: 600;
+  font-family: var(--font-body);
+}
+
+.status-badge.in-transit {
+  background: var(--accent-light);
+  color: var(--accent);
+  border: 1px solid rgba(199, 106, 8, 0.2);
+}
+
+.arrive-btn {
+  width: 100%;
+  padding: 18px 20px;
+  font-size: 17px;
+  font-weight: 600;
+  font-family: var(--font-body);
+  color: white;
+  background: linear-gradient(180deg, #3d8b4f 0%, var(--success) 50%, #1f4d2c 100%);
+  border: none;
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.2s ease;
+  margin-bottom: 24px;
+  box-shadow: var(--shadow-sm), 0 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.arrive-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.complete-btn {
+  width: 100%;
+  padding: 18px 20px;
+  font-size: 17px;
+  font-weight: 600;
+  font-family: var(--font-body);
+  color: white;
+  background: linear-gradient(180deg, #3d8b4f 0%, var(--success) 50%, #1f4d2c 100%);
+  border: none;
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.2s ease;
+  margin-top: 8px;
+  box-shadow: var(--shadow-sm), 0 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.complete-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.delivery-wait-card {
+  text-align: center;
+}
+
+.delivery-wait-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+  color: var(--text);
+}
+
+.delivery-wait-text {
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.delivery-wait-hint {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.delivery-complete-intro {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+  line-height: 1.45;
+}
